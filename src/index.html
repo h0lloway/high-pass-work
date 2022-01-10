@@ -16,25 +16,31 @@
   <header class="header">
     <div class="header__container container">
       <div class="header__left">
-        <img src="img/header-logo.png" alt="Логотип сайта high pass">
+        <picture>
+          <source srcset="img/header-logo-320.png" media="(max-width: 530px)">
+          <source srcset="img/header-logo-768.webp" media="(max-width: 890px)">
+          <source srcset="img/header-logo-1024.png" media="(max-width: 1199.9px)">
+          <img src="img/header-logo.png" alt="Логотип сайта high pass">
+        </picture>
+
       </div>
       <div class="header__middle">
         <nav class="header__nav">
           <ul class="header__list list-reset">
             <li class="header__list-item">
-              <a href="#" class="header__item-link">О&nbsp;студии</a>
+              <a class="header__item-link" href="#about-us">О&nbsp;студии</a>
             </li>
             <li class="header__list-item">
-              <a href="#" class="header__item-link">Наши проекты</a>
+              <a class="header__item-link" href="#projects">Наши проекты</a>
             </li>
             <li class="header__list-item">
-              <a href="#" class="header__item-link">Услуги</a>
+              <a class="header__item-link" href="#services">Услуги</a>
             </li>
             <li class="header__list-item">
-              <a href="#" class="header__item-link">Мастер-классы</a>
+              <a class="header__item-link" href="#mk">Мастер-классы</a>
             </li>
             <li class="header__list-item">
-              <a href="#" class="header__item-link">Контакты</a>
+              <a class="header__item-link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -63,11 +69,38 @@
             </a>
           </li>
         </ul>
-        <button class="header__search-btn my-btn">
+        <!-- <button class="header__search-btn form-btn-open my-btn" aria-label="Открыть форму поиска">
           <svg class="search-img">
             <use xlink:href="img/sprite.svg#search-btn"></use>
           </svg>
-        </button>
+        </button> -->
+
+
+        <div class="header__form-search">
+          <div class="header__form-container">
+            <button class="header__form-btn-open my-btn">
+              <svg class="search-img">
+                <use xlink:href="img/sprite.svg#search-btn"></use>
+              </svg>
+            </button>
+            <form action="/" class="header__form">
+              <input class="header__form-input" type="text" placeholder="Что будем искать?">
+              <button class="header__form-btn-close my-btn">
+                <svg class="close-img">
+                  <use xlink:href="img/sprite.svg#form-btn-close"></use>
+                </svg>
+              </button>
+            </form>
+            <button class="header__form-btn-submit my-btn" type="submit" aria-label="Отправить запрос">
+              <svg class="search-img">
+                <use xlink:href="img/sprite.svg#search-btn"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+
+
       </div>
     </div>
 
@@ -79,19 +112,19 @@
         <nav class="bottom__nav">
           <ul class="bottom__list list-reset">
             <li class="bottom__list-item">
-              <a href="#" class="bottom__item-link">О&nbsp;студии</a>
+              <a class="bottom__item-link" href="#about-us">О&nbsp;студии</a>
             </li>
             <li class="bottom__list-item">
-              <a href="#" class="bottom__item-link">Наши проекты</a>
+              <a class="bottom__item-link" href="#projects">Наши проекты</a>
             </li>
             <li class="bottom__list-item">
-              <a href="#" class="bottom__item-link">Услуги</a>
+              <a class="bottom__item-link" href="#services">Услуги</a>
             </li>
             <li class="bottom__list-item">
-              <a href="#" class="bottom__item-link">Мастер-классы</a>
+              <a class="bottom__item-link" href="#mk">Мастер-классы</a>
             </li>
             <li class="bottom__list-item">
-              <a href="#" class="bottom__item-link">Контакты</a>
+              <a class="bottom__item-link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -100,6 +133,8 @@
   </header>
 
   <main>
+
+
     <section class="hero" id="hero">
       <h1 style="display: none;">Фотостудия High pass</h1>
       <div class="container hero__container">
@@ -110,7 +145,7 @@
           <h2 class="hero__title">
             Неоновый фотосет 2.0 7&nbsp;июля 20:00
           </h2>
-          <a class="hero__btn my-btn entire-btn">
+          <a class="hero__btn my-btn entire-btn orange-btn">
             Узнать больше
           </a>
           <span class="hero__tag hashtag">
@@ -124,22 +159,38 @@
           </h2>
           <ul class="hero__list list-reset">
             <li class="hero__list-item item-1">
-              <img src="img/photo-1.webp" alt="Фото-1">
+              <picture>
+                <source srcset="img/photo-1-320.webp" media="(max-width: 530px)">
+                <source srcset="img/photo-1-768.webp" media="(max-width: 890px)">
+                <source srcset="img/photo-1-1024.webp" media="(max-width: 1199.9px)">
+                <img src="img/photo-1.webp" alt="Фото-1">
+              </picture>
             </li>
             <li class="hero__list-item item-2">
-              <img src="img/photo-2.webp" alt="Фото-2">
+              <picture>
+                <source srcset="img/photo-2-320.webp" media="(max-width: 530px)">
+                <source srcset="img/photo-2-768.webp" media="(max-width: 890px)">
+                <source srcset="img/photo-2-1024.webp" media="(max-width: 1199.9px)">
+                <img src="img/photo-2.webp" alt="Фото-2">
+              </picture>
             </li>
             <li class="hero__list-item item-3">
-              <img src="img/photo-3.webp" alt="Фото-3">
+              <picture>
+                <source srcset="img/photo-3-320.webp" media="(max-width: 530px)">
+                <source srcset="img/photo-3-768.webp" media="(max-width: 890px)">
+                <source srcset="img/photo-3-1024.webp" media="(max-width: 1199.9px)">
+                <img src="img/photo-3.webp" alt="Фото-3">
+              </picture>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
+
     <section class="about-us" id="about-us">
       <div class="container about-us__container">
-        <h2 class="about-us__title">
+        <h2 class="about-us__title title">
           О&nbsp;студии
         </h2>
         <p class="about-us__descr">
@@ -157,20 +208,22 @@
         </p>
         <div class="about-us__right">
           <div class="about-us__photo-cam"></div>
-          <strong class="about-us__caption">Подписаться на&nbsp;рассылку</strong>
+          <h3 class="about-us__subtitle">Подписаться на&nbsp;рассылку</h3>
           <form class="about-us__form">
             <label class="about-us__form-label" for="email">
               <input class="about-us__form-input" type="email" id="email" placeholder="E-mail">
             </label>
-            <button class="about-us__btn my-btn">Отправить</button>
+            <button class="about-us__btn my-btn orange-btn">Отправить</button>
           </form>
         </div>
       </div>
     </section>
 
+
+
     <section class="projects" id="projects">
       <div class="container projects__container">
-        <h2 class="projects__title">
+        <h2 class="projects__title title">
           Наши проекты
         </h2>
         <div class="projects__all">
@@ -178,12 +231,25 @@
 
             <li class="projects__top-item">
               <figure class="projects__figure">
-                <img src="../img/projects-1.webp" alt="Фотография-1">
+                <div class="projects__card-img">
+                  <picture>
+                    <source srcset="img/projects-1-320.webp" media="(max-width: 530px)">
+                    <source srcset="img/projects-1-768.webp" media="(max-width: 890px)">
+                    <source srcset="img/projects-1-1024.webp" media="(max-width: 1199.9px)">
+                    <img src="../img/projects-1.webp" alt="Фотография-1">
+                  </picture>
+                </div>
                 <figcaption class="projects__figcaption">
-                  <a href="#" class="projects__link">
+                  <a class="projects__link" href="#">
                     Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени...
                   </a>
+                  <a class="projects__link for-1024" href="#">
+                    Синтетически, смешаны с&nbsp;не&nbsp;уникальными...
+                  </a>
                   <div class="data">
+                    <svg class="calendar">
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
                     <span class="projects__day">16&nbsp;июня</span>
                   </div>
                 </figcaption>
@@ -193,12 +259,25 @@
 
             <li class="projects__top-item">
               <figure class="projects__figure">
-                <img src="../img/projects-2.webp" alt="Фотография-2">
+                <div class="projects__card-img">
+                  <picture>
+                    <source srcset="img/projects-2-320.webp" media="(max-width: 530px)">
+                    <source srcset="img/projects-2-768.webp" media="(max-width: 890px)">
+                    <source srcset="img/projects-2-1024.webp" media="(max-width: 1199.9px)">
+                    <img src="../img/projects-2.webp" alt="Фотография-2">
+                  </picture>
+                </div>
                 <figcaption class="projects__figcaption">
-                  <a href="#" class="projects__link">
-                    В&nbsp;своём стремлении улучшить опыт мы&nbsp;упускаем, что явные...
+                  <a class="projects__link" href="#">
+                    В&nbsp;своём стремлении улучшить опыт&nbsp;мы упускаем, что явные...
+                  </a>
+                  <a class="projects__link for-1024" href="#">
+                    В&nbsp;своём стремлении улучшить опыт&nbsp;мы...
                   </a>
                   <div class="data">
+                    <svg class="calendar">
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
                     <span class="projects__day">28&nbsp;мая</span>
                   </div>
                 </figcaption>
@@ -206,14 +285,27 @@
               <span class="projects__tag hashtag">#портрет</span>
             </li>
 
-            <li class="projects__top-item">
+            <li class="projects__top-item top-item-1024">
               <figure class="projects__figure">
-                <img src="../img/projects-3.webp" alt="Фотография-3">
+                <div class="projects__card-img">
+                  <picture>
+                    <source srcset="img/projects-3-320.webp" media="(max-width: 530px)">
+                    <source srcset="img/projects-3-768.webp" media="(max-width: 890px)">
+                    <source srcset="img/projects-3-1024.webp" media="(max-width: 1199.9px)">
+                    <img src="../img/projects-3.webp" alt="Фотография-3">
+                  </picture>
+                </div>
                 <figcaption class="projects__figcaption">
-                  <a href="#" class="projects__link">
+                  <a class="projects__link" href="#">
                     Равным образом, высокое качество позиционных...
                   </a>
+                  <a class="projects__link for-1024" href="#">
+                    Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада
+                  </a>
                   <div class="data">
+                    <svg class="calendar">
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
                     <span class="projects__day">14&nbsp;мая</span>
                   </div>
                 </figcaption>
@@ -241,6 +333,22 @@
 
           <ul class="projects__bottom list-reset">
 
+            <li class="projects__top-item huge-item-top huge-item-top-1024">
+              <div class="item-top">
+                <div class="data">
+                  <span class="projects__day">9&nbsp;апреля</span>
+                </div>
+                <h3 class="projects__subtitle">
+                  Cемантический разбор
+                </h3>
+                <span class="projects__descr">
+                  В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы
+                </span>
+              </div>
+              <a class="projects__btn my-btn transp-btn" href="#">О проекте</a>
+              <span class="projects__tag hashtag">#fuji</span>
+            </li>
+
             <li class="projects__bottom-item huge-item-bottom">
               <div class="item-top">
                 <div class="data">
@@ -257,34 +365,56 @@
               <span class="projects__tag hashtag">#проектзабвение</span>
             </li>
 
-            <li class="projects__bottom-item">
+            <li class="projects__bottom-item bottom-item-1024">
               <figure class="projects__figure">
-                <img src="../img/projects-4.webp" alt="Фотография-3">
-                <figcaption class="projects__figcaption">
-                  <a href="#" class="projects__link">
+                <picture>
+                  <source srcset="img/projects-4-320.webp" media="(max-width: 530px)">
+                  <source srcset="img/projects-4-768.webp" media="(max-width: 890px)">
+                  <source srcset="img/projects-4-1024.webp" media="(max-width: 1199.9px)">
+                  <img src="../img/projects-4.webp" alt="Фотография-4">
+                </picture>
+                <figcaption class="projects__figcaption-bottom">
+                  <a class="projects__link" href="#">
+                    Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом либералов...
+                  </a>
+                  <a class="projects__link for-1024" href="#">
                     Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом либералов...
                   </a>
                   <div class="data">
-                    <span class="projects__day">16&nbsp;июня</span>
+                    <svg class="calendar">
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
+                    <span class="projects__day">9&nbsp;марта</span>
                   </div>
                 </figcaption>
               </figure>
               <span class="projects__tag hashtag">#пейзаж</span>
             </li>
 
-            <li class="projects__bottom-item">
+            <li class="projects__bottom-item bottom-item-last">
               <figure class="projects__figure">
-                <img src="../img/projects-5.webp" alt="Фотография-3">
-                <figcaption class="projects__figcaption">
-                  <a href="#" class="projects__link">
+                <picture>
+                  <source srcset="img/projects-5-320.webp" media="(max-width: 530px)">
+                  <source srcset="img/projects-5-768.webp" media="(max-width: 890px)">
+                  <source srcset="img/projects-5-1024.webp" media="(max-width: 1199.9px)">
+                  <img src="../img/projects-5.webp" alt="Фотография-5">
+                </picture>
+                <figcaption class="projects__figcaption-bottom">
+                  <a class="projects__link" href="#">
+                    С&nbsp;учётом сложившейся международной обстановки, новая модель организационной...
+                  </a>
+                  <a class="projects__link for-1024" href="#">
                     С&nbsp;учётом сложившейся международной обстановки, новая модель организационной...
                   </a>
                   <div class="data">
-                    <span class="projects__day">16&nbsp;июня</span>
+                    <svg class="calendar">
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
+                    <span class="projects__day">1&nbsp;марта</span>
                   </div>
                 </figcaption>
               </figure>
-              <span class="projects__tag hashtag">#пейзаж</span>
+              <span class="projects__tag hashtag">#портрет</span>
             </li>
 
           </ul>
@@ -293,13 +423,14 @@
     </section>
 
 
+
     <section class="contacts" id="contacts">
       <div class="container contacts__container">
-        <h2 class="contacts__title">Контакты</h2>
+        <h2 class="contacts__title title">Контакты</h2>
         <div class="contacts__left">
           <div class="contacts__map-wrap">
             <div class="contacts__address">
-              <h3 class="contacts__subtitle">
+              <h3 class="contacts__subtitle-adr">
                 Студия &laquo;High pass&raquo;
               </h3>
               <address class="contacts__adr">
@@ -307,34 +438,44 @@
                 &#8470;&nbsp;82
               </address>
               <a class="contacts__phone" aria-label="телефон 849542423532" href="tel:+749542423532">
+                <svg class="phone">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
                 +7 (495) 42-423-532
               </a>
+              <button class="close-btn my-btn">
+                <svg class="close">
+                  <use xlink:href="img/sprite.svg#х"></use>
+                </svg>
+              </button>
             </div>
             <div class="contacts__map map" id="map"></div>
           </div>
         </div>
         <div class="contacts__right">
-          <h3 class="contacts__caption">
+          <h3 class="contacts__subtitle">
             Оставить заявку
           </h3>
           <span class="contacts__content">
             Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съемки или
             другого мероприятия
           </span>
-          <form class="contacts__form">
+          <form class="contacts__form" action="" method="POST">
             <label class="contacts__label" for="text">
-              <input class="contacts__input" type="text" id="text" placeholder="Имя">
+              <input class="contacts__input" type="text" placeholder="Имя" data-validate-field="name">
             </label>
             <label class="contacts__label" for="email2">
-              <input class="contacts__input" type="email" id="email2" placeholder="E-mail">
+              <input class="contacts__input" type="email" placeholder="E-mail" data-validate-field="mail">
             </label>
             <textarea class="contacts__textarea" cols="30" rows="10" placeholder="Комментарий"></textarea>
-            <button class="contacts__btn my-btn">Отправить</button>
+            <button class="contacts__btn my-btn orange-btn">Отправить</button>
           </form>
         </div>
       </div>
     </section>
   </main>
+
+
 
   <footer class="footer">
     <div class="container footer__container">
